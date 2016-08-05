@@ -19,7 +19,7 @@
     - ps: gitversion /l console /output buildserver /updateassemblyinfo /b (get-item env:APPVEYOR_REPO_BRANCH).Value
   build:
     project: src\ServiceStack.Authentication.Layer.sln
-    verbosity: minimal
+    verbosity: normal
   test: off
   after_build:
     - ps: nuget pack src\ServiceStack.Authentication.Layer\ServiceStack.Authentication.Layer.csproj -Version (get-item env:GitVersion_InformationalVersion).Value
