@@ -22,7 +22,7 @@
     verbosity: normal
   test: off
   after_build:
-    - ps: nuget pack src\ServiceStack.Authentication.Layer\ServiceStack.Authentication.Layer.csproj -Version (get-item env:GitVersion_InformationalVersion).Value
+    - ps: nuget pack src\ServiceStack.Authentication.Layer\ServiceStack.Authentication.Layer.csproj -Version (get-item env:GitVersion_InformationalVersion).Value -properties "Configuration=$env:configuration;Platform=AnyCPU" -Verbosity Detailed
     - ps: if(-not $env:APPVEYOR_PULL_REQUEST_NUMBER){ nuget push *.nupkg -ApiKey (get-item env:nuget_api_key).Value }
 - 
   branches:
