@@ -65,9 +65,6 @@
     <Compile Include="ServiceStackSessionUserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="layer.pem">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
     <None Include="ServiceStack.Authentication.Layer.nuspec" />
   </ItemGroup>
