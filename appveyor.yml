@@ -23,7 +23,7 @@
   test: off
   after_build:
     - ps: nuget pack src\ServiceStack.Authentication.Layer\ServiceStack.Authentication.Layer.csproj -Version (get-item env:GitVersion_NuGetVersionV2).Value -properties "Configuration=$env:configuration;Platform=AnyCPU" -Verbosity Detailed
-    - ps: if(-not $env:APPVEYOR_PULL_REQUEST_NUMBER){ nuget push *.nupkg -ApiKey (get-item env:nuget_api_key).Value -source nuget.org }
+    - ps: if(-not $env:APPVEYOR_PULL_REQUEST_NUMBER){ nuget push *.nupkg -ApiKey (get-item env:nuget_api_key).Value -source https://www.nuget.org/api/v2/package }
 - 
   branches:
     only:
