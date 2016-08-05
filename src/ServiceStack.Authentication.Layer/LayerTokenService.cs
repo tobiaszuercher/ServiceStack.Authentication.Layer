@@ -8,7 +8,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Security;
 
-using ServiceStack.Authentication.Layer.ServiceModel;
+using ServiceStack.Authentication.Layer.ServiceModel;   
 using ServiceStack.Text;
 
 namespace ServiceStack.Authentication.Layer
