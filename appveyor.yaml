@@ -2,7 +2,7 @@
   branches:
     only:
       - master
-      - develop
+      - dev
   configuration: Release
   platform: Any CPU
   cache:
