@@ -51,7 +51,7 @@
     verbosity: minimal
   test: off
   after_build:
-    - ps: nuget pack src\ServiceStack.Authentication.Layer\ServiceStack.Authentication.Layer.csproj -Version (get-item env:GitVersion_InformationalVersion).Value -properties "Configuration=$env:configuration;Platform=AnyCPU"
+    - ps: nuget pack src\ServiceStack.Authentication.Layer\ServiceStack.Authentication.Layer.csproj -Version (get-item env:GitVersion_InformationalVersion).Value -properties "Configuration=$env:configuration;Platform=AnyCPU" -Verbosity Detailed -Build
     - ps: nuget push *.nupkg -ApiKey (get-item env:private_nuget_api_key).Value -Source https://ci.appveyor.com/nuget/tobiaszuercher/api/v2/package
 -
   branches:
