@@ -1,0 +1,13 @@
+﻿<package>
+  <metadata>
+    <id>ServiceStack.Authentication.Layer</id>
+    <version>0.0.0.0</version>
+    <authors>Tobias Zürcher</authors>
+    <owners>Tobias Zürcher</owners>
+    <licenseUrl>http://github.com/tobiaszuercher/ServiceStack.Authentication.Layer</licenseUrl>
+    <projectUrl>http://github.com/tobiaszuercher/ServiceStack.Authentication.Layer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Identity token provider for www.layer.com which can be easily added as a plugin to ServiceStack.</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
