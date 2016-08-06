@@ -3,7 +3,7 @@
 namespace ServiceStack.Authentication.Layer.ServiceModel
 {
     /// <summary>
-    /// model for get layer identity code
+    /// Model to get a layer identity token.
     /// </summary>
     [DataContract]
     [Route("/auth/layer/token", Verbs = "GET")]
@@ -16,7 +16,7 @@ namespace ServiceStack.Authentication.Layer.ServiceModel
         public string Nonce { get; set; }
 
         /// <summary>
-        /// User id used for register with Layer server
+        /// User id used to register with Layer server
         /// </summary>
         [DataMember(Name = "user_id")]
         public string UserId { get; set; }
