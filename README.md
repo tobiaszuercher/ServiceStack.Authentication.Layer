@@ -7,8 +7,8 @@ ServiceStack Plugin which generates identity token for www.layer.com.
 
 Branch | Status
 :---|:---|:---
-Master               | [![Build status](https://ci.appveyor.com/api/projects/status/nuetuwy9go5mif9v/branch/master?svg=true](https://ci.appveyor.com/project/tobiaszuercher/servicestack-authentication-layer)
-Dev                  | [![Build status](https://ci.appveyor.com/api/projects/status/nuetuwy9go5mif9v/branch/master?svg=true](https://ci.appveyor.com/project/tobiaszuercher/servicestack-authentication-layer)
+Master               | [![Build status](https://ci.appveyor.com/api/projects/status/nuetuwy9go5mif9v/branch/master?svg=true)](https://ci.appveyor.com/project/tobiaszuercher/servicestack-authentication-layer)
+Dev                  | [![Build status](https://ci.appveyor.com/api/projects/status/nuetuwy9go5mif9v/branch/master?svg=true)](https://ci.appveyor.com/project/tobiaszuercher/servicestack-authentication-layer)
 
 # Usage
 
@@ -32,7 +32,7 @@ public override void Configure(Container container)
 }
 ```
 
-It will ad a route for `/auth/layer/token` with the following DTO:
+It will add a route for `/auth/layer/token` with the following DTO:
 
 ```csharp
 /// <summary>
@@ -60,7 +60,7 @@ For more details, please check the excellent documentation by layer.com: https:/
 
 By default, it uses the ServiceStack built-in session to verify the user id. 
 This may be overriden by implementing the `ILayerUserValidation` interface. Don't forget
-to register it to the container with `container..RegisterAs<MyUserValidator, ILayerUserValidator>();`
+to register it to the container with `container.RegisterAs<MyUserValidator, ILayerUserValidator>();`
 
 The response will be an `identity token` which can be used to create a layer session documented here: https://developer.layer.com/docs/client#3-obtain-a-session-token
 
