@@ -3,7 +3,7 @@ ServiceStack.Authentication.Layer
 
 ServiceStack Plugin which generates identity token for www.layer.com.
 
-![NuGet Version](http://img.shields.io/nuget/v/Transformer.VisualStudio.svg)
+![NuGet Version](http://img.shields.io/nuget/v/ServiceStack.Authentication.Layer.svg)
 
 Branch | Status
 :---|:---|:---
