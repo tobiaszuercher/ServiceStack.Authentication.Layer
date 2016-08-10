@@ -58,8 +58,8 @@
   <ItemGroup>
     <Compile Include="ILayerUserValidator.cs" />
     <Compile Include="LayerTokenProviderFeature.cs" />
-    <Compile Include="ServiceModel\GetLayerIdentityToken.cs" />
-    <Compile Include="ServiceModel\GetLayerTokenResponse.cs" />
+    <Compile Include="ServiceModel\CreateLayerIdentityToken.cs" />
+    <Compile Include="ServiceModel\CreateLayerTokenResponse.cs" />
     <Compile Include="LayerTokenService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceStackSessionUserValidator.cs" />

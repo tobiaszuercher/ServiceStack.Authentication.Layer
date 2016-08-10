@@ -22,11 +22,11 @@ namespace ServiceStack.Authentication.Layer
             _validator = validator;
         }
 
-        public GetLayerTokenResponse Get(GetLayerIdentityToken request)
+        public CreateLayerTokenResponse Post(CreateLayerIdentityToken request)
         {
             // validate if the user is authenticated
             if (!_validator.Validate(request.UserId))
-                throw HttpError.Forbidden("Forbidden!");
+                throw HttpError.Forbidden("This user is not allowed to create a validation token for the requested user.");
 
             var feature = HostContext.GetPlugin<LayerTokenProviderFeature>();
 
@@ -71,7 +71,7 @@ namespace ServiceStack.Authentication.Layer
 
                 var token = string.Join(".", headerEncoded, payloadEncoded, signatureBytesTemp.ToBase64UrlSafe());
 
-                return new GetLayerTokenResponse() { IdentityToken = token };
+                return new CreateLayerTokenResponse() { IdentityToken = token };
             }
         }
     }

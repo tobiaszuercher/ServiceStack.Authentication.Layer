@@ -39,8 +39,8 @@ It will add a route for `/auth/layer/token` with the following DTO:
 /// Model to get a layer identity token.
 /// </summary>
 [DataContract]
-[Route("/auth/layer/token", Verbs = "GET")]
-public class GetLayerIdentityToken : IReturn<GetLayerTokenResponse>
+[Route("/auth/layer/token", Verbs = "POST")]
+public class CreateLayerIdentityToken : IReturn<CreateLayerTokenResponse>
 {
     /// <summary>
     /// Nonce created by Layer client
@@ -58,7 +58,7 @@ public class GetLayerIdentityToken : IReturn<GetLayerTokenResponse>
 
 For more details, please check the excellent documentation by layer.com: https://developer.layer.com/docs/client#authentication.
 
-By default, it uses the ServiceStack built-in session to verify the user id. 
+By default, it uses the ServiceStack built-in session to verify the user id (`UserAuthId`). 
 This may be overriden by implementing the `ILayerUserValidation` interface. Don't forget
 to register it to the container with `container.RegisterAs<MyUserValidator, ILayerUserValidator>();`
 

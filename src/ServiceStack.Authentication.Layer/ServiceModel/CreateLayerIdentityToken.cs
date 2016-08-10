@@ -6,8 +6,8 @@ namespace ServiceStack.Authentication.Layer.ServiceModel
     /// Model to get a layer identity token.
     /// </summary>
     [DataContract]
-    [Route("/auth/layer/token", Verbs = "GET")]
-    public class GetLayerIdentityToken : IReturn<GetLayerTokenResponse>
+    [Route("/auth/layer/token", Verbs = "POST")]
+    public class CreateLayerIdentityToken : IReturn<CreateLayerTokenResponse>
     {
         /// <summary>
         /// Nonce created by Layer client

@@ -10,7 +10,7 @@
             var session = SessionFeature.GetOrCreateSession<AuthUserSession>();
 
             return !string.IsNullOrEmpty(requestedUserId) &&
-                   session.UserAuthId == requestedUserId;
+                   session.UserAuthId.ToLowerInvariant() == requestedUserId.ToLowerInvariant();
         }
     }
 }
